@@ -23,4 +23,9 @@ app.get('/login/:email/:password' , async(req , resp)=>{
     resp.send(result);
 })
 
+app.get('/user' , async(req , resp)=>{
+    const result = await user.find();
+    resp.send(result)
+})
+
 app.listen(PORT)
